@@ -21,24 +21,27 @@ function onReady(){
 // find out if a conditional can be initialized inside the append to conditionally append based on the button.
 
 function appendRed(){
-
     $('#blocks').append('<div class="block red-fill"></div>');
-    $('span').empty('#red-count')
+    $('#red-count').empty()
     $('#red-count').append( $('.red-fill').length)
 
 }
 function appendBlue(){
     $("#blocks").append('<div class="block blue-fill"></div>');
-    $("span").empty("#blue-count");
-	$("#red-count").append($(".blue-fill").length);
+    $("#blue-count").empty();
+	$("#blue-count").append($(".blue-fill").length);
 
 }
 function appendGreen(){
     $("#blocks").append('<div class="block green-fill"></div>');
+    $("#green-count").empty();
+	$("#green-count").append($(".green-fill").length);
 
 }
 function appendYellow(){
     $("#blocks").append('<div class="block yellow-fill"></div>');
+    $("#yellow-count").empty();
+	$("#yellow-count").append($(".yellow-fill").length);
 
 }
 
