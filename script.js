@@ -39,29 +39,37 @@ function appendYellow() {
 	$("#yellow-count").append($(".yellow-fill").length);
 }
 
-function recountRed() {
+function recountBlocks() {
 	$("#red-count").empty();
 	$("#red-count").append($(".red-fill").length);
-}
-
-function recountBlue() {
-	$("#blue-count").empty();
+    $("#blue-count").empty();
 	$("#blue-count").append($(".blue-fill").length);
-}
-function recountGreen() {
 	$("#green-count").empty();
 	$("#green-count").append($(".green-fill").length);
-}
-
-function recountYellow() {
 	$("#yellow-count").empty();
 	$("#yellow-count").append($(".yellow-fill").length);
+
 }
+
+// function recountBlue() {
+// 	$("#blue-count").empty();
+// 	$("#blue-count").append($(".blue-fill").length);
+// }
+// function recountGreen() {
+// 	$("#green-count").empty();
+// 	$("#green-count").append($(".green-fill").length);
+// }
+
+// function recountYellow() {
+// 	$("#yellow-count").empty();
+// 	$("#yellow-count").append($(".yellow-fill").length);
+// }
 
 function removeBlock() {
 	$(this).remove();
-	recountRed();
-	recountBlue();
-	recountGreen();
-	recountYellow();
+	recountBlocks()
+    // recountRed();
+	// recountBlue();
+	// recountGreen();
+	// recountYellow();
 }
