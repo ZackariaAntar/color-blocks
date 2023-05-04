@@ -8,10 +8,11 @@ function onReady(){
     $('#blue-btn').on('click', appendBlue);
     $('#green-btn').on('click', appendGreen);
     $('#yellow-btn').on('click', appendYellow);
-    $('#blocks').on('click', '.red-fill', removeBlock)
-    $('#blocks').on('click', '.blue-fill', removeBlock)
-    $('#blocks').on('click', '.green-fill', removeBlock)
-    $('#blocks').on('click', '.yellow-fill', removeBlock)
+    // $('#blocks').on('click', '.red-fill', removeBlock)
+    // $('#blocks').on('click', '.blue-fill', removeBlock)
+    // $('#blocks').on('click', '.green-fill', removeBlock)
+    // $('#blocks').on('click', '.yellow-fill', removeBlock)
+    // $('#blocks').on('click', '.block', removeBlock)
 
 
 }
@@ -20,11 +21,16 @@ function onReady(){
 // find out if a conditional can be initialized inside the append to conditionally append based on the button.
 
 function appendRed(){
-    $("#blocks").append('<div class="block red-fill"></div>');
+
+    $('#blocks').append('<div class="block red-fill"></div>');
+    $('span').empty('#red-count')
+    $('#red-count').append( $('.red-fill').length)
 
 }
 function appendBlue(){
     $("#blocks").append('<div class="block blue-fill"></div>');
+    $("span").empty("#blue-count");
+	$("#red-count").append($(".blue-fill").length);
 
 }
 function appendGreen(){
@@ -33,12 +39,13 @@ function appendGreen(){
 }
 function appendYellow(){
     $("#blocks").append('<div class="block yellow-fill"></div>');
-    
-}
-
-function removeBlock(){
-    $(this).remove()
 
 }
+
+
+// function removeBlock(){
+//     $(this).remove()
+
+// }
 
 
